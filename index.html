@@ -1,1971 +1,917 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" data-theme="light">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Adish Ghimire | Full-Stack .NET Developer</title>
-
-<meta name="description" content="Adish Ghimire - Full Stack .NET Developer specializing in ASP.NET Core, Blazor, React, SQL Server, AWS and Insurance Domain Applications.">
-
-<meta name="keywords" content="
-Adish Ghimire,
-.NET Developer,
-ASP.NET Core,
-Blazor,
-C# Developer,
-React Developer,
-SQL Server,
-Insurance Software Developer
-">
-
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Adish Ghimire — Full-Stack .NET Developer &amp; Insurance Systems Engineer</title>
+<meta name="description" content="Adish Ghimire is a full-stack .NET developer based in Kathmandu, building policy, underwriting and enterprise systems with ASP.NET Core, Blazor, React, SQL Server and AWS.">
+<meta name="keywords" content="Adish Ghimire, .NET Developer, ASP.NET Core, Blazor, C# Developer, React Developer, SQL Server, Insurance Software Developer, Kathmandu Developer, DotNet Pathshala">
 <meta name="author" content="Adish Ghimire">
-
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://adish-seven.vercel.app/">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#F6F4EF">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0A0D14">
 
 <!-- Open Graph -->
-<meta property="og:title" content="Adish Ghimire | Full-Stack .NET Developer">
-<meta property="og:description" content="Building enterprise applications using .NET, Blazor, React and Cloud technologies.">
 <meta property="og:type" content="website">
-
-
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-
-<!-- Icons -->
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Inter',sans-serif;
-}
-
-
-html{
-scroll-behavior:smooth;
-}
-
-
-body{
-
-background:#050505;
-color:white;
-overflow-x:hidden;
-
-}
-
-
-/* Loader */
-
-.loader{
-
-position:fixed;
-width:100%;
-height:100vh;
-background:#050505;
-display:flex;
-justify-content:center;
-align-items:center;
-z-index:9999;
-
-}
-
-
-.loader span{
-
-width:60px;
-height:60px;
-border-radius:50%;
-border:5px solid #222;
-border-top-color:#9b5cff;
-animation:spin 1s linear infinite;
-
-}
-
-
-@keyframes spin{
-
-to{
-transform:rotate(360deg);
-}
-
-}
-
-
-/* Aurora */
-
-.aurora{
-
-position:absolute;
-width:500px;
-height:500px;
-background:linear-gradient(
-45deg,
-#7b2cff,
-#00ffff
-);
-
-filter:blur(150px);
-opacity:.25;
-z-index:-1;
-
-}
-
-
-/* Navbar */
-
-
-.navbar{
-
-position:fixed;
-top:20px;
-left:50%;
-transform:translateX(-50%);
-width:90%;
-max-width:1200px;
-
-padding:18px 30px;
-
-background:rgba(255,255,255,.08);
-backdrop-filter:blur(20px);
-
-border:1px solid rgba(255,255,255,.1);
-
-border-radius:30px;
-
-display:flex;
-justify-content:space-between;
-align-items:center;
-
-z-index:1000;
-
-}
-
-
-.logo{
-
-font-size:25px;
-font-weight:800;
-
-}
-
-
-.navbar a{
-
-color:#aaa;
-text-decoration:none;
-margin-left:25px;
-transition:.3s;
-
-}
-
-
-.navbar a:hover{
-
-color:white;
-
-}
-
-
-
-/* Hero */
-
-
-.hero{
-
-min-height:100vh;
-
-display:flex;
-align-items:center;
-
-padding:120px 8%;
-
-position:relative;
-
-}
-
-
-.hero-content{
-
-max-width:900px;
-
-}
-
-
-.hero h1{
-
-font-size:70px;
-line-height:1.1;
-
-font-weight:800;
-
-}
-
-
-.gradient{
-
-background:linear-gradient(
-90deg,
-#ffffff,
-#9b5cff,
-#00ffff
-);
-
--webkit-background-clip:text;
-color:transparent;
-
-}
-
-
-.hero p{
-
-font-size:22px;
-color:#aaa;
-
-margin:30px 0;
-
-max-width:700px;
-
-}
-
-
-.btn{
-
-display:inline-block;
-
-padding:15px 35px;
-
-border-radius:40px;
-
-background:white;
-color:black;
-
-text-decoration:none;
-
-font-weight:600;
-
-margin-right:15px;
-
-transition:.3s;
-
-}
-
-
-.btn:hover{
-
-transform:translateY(-5px);
-
-}
-
-
-.btn-outline{
-
-background:transparent;
-border:1px solid #555;
-color:white;
-
-}
-
-
-
-/* Sections */
-
-section{
-
-padding:100px 8%;
-
-}
-
-
-.title{
-
-font-size:45px;
-margin-bottom:40px;
-
-}
-
-
-.glass{
-
-background:rgba(255,255,255,.06);
-
-border:1px solid rgba(255,255,255,.1);
-
-backdrop-filter:blur(20px);
-
-border-radius:25px;
-
-padding:35px;
-
-}
-
-
-/* About */
-
-
-.about-grid{
-
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-
-}
-
-
-.about p{
-
-color:#bbb;
-font-size:18px;
-line-height:1.8;
-
-}
-
-
-
-/* Cursor */
-
-
-.cursor{
-
-position:fixed;
-
-width:20px;
-height:20px;
-
-border-radius:50%;
-
-background:#9b5cff;
-
-pointer-events:none;
-
-mix-blend-mode:screen;
-
-z-index:99999;
-
-}
-
-
-/* Responsive */
-
-
-@media(max-width:768px){
-
-.hero h1{
-
-font-size:45px;
-
-}
-
-
-.navbar{
-
-display:none;
-
-}
-
-
-.about-grid{
-
-grid-template-columns:1fr;
-
-}
-
-}
-
-
-</style>
-
-</head>
-
-
-<body>
-
-
-<div class="loader">
-<span></span>
-</div>
-
-
-<div class="cursor"></div>
-
-
-<div class="aurora"></div>
-
-
-<nav class="navbar">
-
-<div class="logo">
-ADISH
-</div>
-
-
-<div>
-
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#experience">Experience</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
-
-</div>
-
-
-</nav>
-
-
-
-<!-- HERO -->
-
-
-<section class="hero">
-
-
-<div class="hero-content">
-
-
-<h1>
-
-Hi, I'm <span class="gradient">
-Adish Ghimire
-</span>
-
-</h1>
-
-
-<h2>
-Full-Stack .NET Developer
-</h2>
-
-
-<p>
-
-Building scalable enterprise applications with
-.NET 10, Blazor, React, SQL Server and Cloud technologies.
-
-</p>
-
-
-
-<a href="#projects" class="btn">
-View Projects
-</a>
-
-
-<a href="#" class="btn btn-outline">
-Download CV
-</a>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-<!-- ABOUT -->
-
-
-<section id="about">
-
-
-<h2 class="title">
-About Me
-</h2>
-
-
-
-<div class="about-grid">
-
-
-<div class="glass about">
-
-
-<p>
-
-I am a Full-Stack .NET Developer with 3+ years of
-experience building enterprise software solutions.
-
-</p>
-
-
-<p>
-
-Currently working as a .NET Developer at
-Sagarmatha Lumbini Insurance Company,
-developing insurance applications, APIs,
-and business solutions.
-
-</p>
-
-
-</div>
-
-
-
-<div class="glass">
-
-
-<h3>
-Professional Profile
-</h3>
-
-
-<br>
-
-
-<p>
-💻 Software Developer<br>
-🏢 Insurance Domain Specialist<br>
-👨‍🏫 Computer Science Teacher<br>
-🎥 Creator - DotNet Pathshala<br>
-📚 MCS Student
-</p>
-
-
-</div>
-
-
-</div>
-
-
-</section> <!-- ================= SKILLS ================= -->
-
-<section id="skills">
-
-<h2 class="title">
-Technical Skills
-</h2>
-
-
-<div class="skills-grid">
-
-
-<div class="glass skill-card">
-
-<i class="fa-solid fa-code"></i>
-
-<h3>
-Backend Development
-</h3>
-
-<p>
-C# <br>
-.NET 10 <br>
-ASP.NET Core <br>
-Blazor <br>
-REST API <br>
-MVC Architecture
-</p>
-
-</div>
-
-
-
-<div class="glass skill-card">
-
-<i class="fa-solid fa-layer-group"></i>
-
-<h3>
-Frontend Development
-</h3>
-
-<p>
-React.js <br>
-Angular <br>
-JavaScript <br>
-HTML5 <br>
-CSS3 <br>
-Bootstrap <br>
-Tailwind CSS
-</p>
-
-</div>
-
-
-
-
-<div class="glass skill-card">
-
-<i class="fa-solid fa-database"></i>
-
-<h3>
-Database & ORM
-</h3>
-
-<p>
-SQL Server <br>
-Entity Framework Core <br>
-Dapper <br>
-Database Design <br>
-Stored Procedures <br>
-Performance Optimization
-</p>
-
-</div>
-
-
-
-
-
-<div class="glass skill-card">
-
-<i class="fa-solid fa-cloud"></i>
-
-<h3>
-Cloud & Tools
-</h3>
-
-<p>
-AWS Lambda <br>
-AWS S3 <br>
-AWS SES <br>
-AWS SQS <br>
-DynamoDB <br>
-Git & GitHub
-</p>
-
-</div>
-
-
-
-</div>
-
-</section>
-
-
-
-<style>
-
-
-.skills-grid{
-
-display:grid;
-
-grid-template-columns:repeat(4,1fr);
-
-gap:25px;
-
-}
-
-
-
-.skill-card{
-
-transition:.4s;
-
-}
-
-
-
-.skill-card:hover{
-
-transform:
-translateY(-15px);
-
-border-color:#9b5cff;
-
-}
-
-
-
-.skill-card i{
-
-font-size:35px;
-
-color:#9b5cff;
-
-margin-bottom:20px;
-
-}
-
-
-.skill-card h3{
-
-margin-bottom:20px;
-
-}
-
-
-.skill-card p{
-
-color:#aaa;
-
-line-height:2;
-
-}
-
-
-
-@media(max-width:900px){
-
-.skills-grid{
-
-grid-template-columns:repeat(2,1fr);
-
-}
-
-}
-
-
-
-@media(max-width:600px){
-
-.skills-grid{
-
-grid-template-columns:1fr;
-
-}
-
-}
-
-
-</style>
-
-
-
-
-
-<!-- ================= EXPERIENCE ================= -->
-
-
-<section id="experience">
-
-
-<h2 class="title">
-Experience
-</h2>
-
-
-
-<div class="timeline">
-
-
-
-<div class="glass timeline-card">
-
-
-<span>
-2025 - Present
-</span>
-
-
-<h3>
-Sagarmatha Lumbini Insurance Company
-</h3>
-
-
-<h4>
-.NET Developer
-</h4>
-
-
-<p>
-
-Working on enterprise insurance solutions.
-
-</p>
-
-
-<ul>
-
-<li>
-Insurance Management Systems
-</li>
-
-<li>
-Underwriting Modules
-</li>
-
-<li>
-Policy Processing System
-</li>
-
-<li>
-REST API Development
-</li>
-
-<li>
-Database Optimization
-</li>
-
-<li>
-Role & Permission Management
-</li>
-
-</ul>
-
-
-</div>
-
-
-
-
-
-<div class="glass timeline-card">
-
-
-<span>
-2023 - 2025
-</span>
-
-
-<h3>
-Arhant Solutions
-</h3>
-
-
-<h4>
-Full Stack Developer
-</h4>
-
-
-<p>
-
-Developed insurance-based software solutions.
-
-</p>
-
-
-<ul>
-
-<li>
-Life Insurance Applications
-</li>
-
-<li>
-MicroInsurance Platform
-</li>
-
-<li>
-Policy Printing System
-</li>
-
-<li>
-Premium Payment Schedule
-</li>
-
-<li>
-Enterprise Web Applications
-</li>
-
-</ul>
-
-
-</div>
-
-
-
-
-
-
-<div class="glass timeline-card">
-
-
-<span>
-2026 - Present
-</span>
-
-
-<h3>
-Aadhaarshila Academy
-</h3>
-
-
-<h4>
-Part-Time Computer Science Teacher
-</h4>
-
-
-<p>
-
-Teaching NEB +2 Computer Science curriculum.
-
-</p>
-
-
-<ul>
-
-<li>
-Programming Fundamentals
-</li>
-
-<li>
-Database Concepts
-</li>
-
-<li>
-Computer Science Theory
-</li>
-
-</ul>
-
-
-</div>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-<style>
-
-
-.timeline{
-
-display:flex;
-
-flex-direction:column;
-
-gap:30px;
-
-max-width:900px;
-
-}
-
-
-
-.timeline-card{
-
-position:relative;
-
-transition:.4s;
-
-}
-
-
-
-.timeline-card:hover{
-
-transform:translateX(15px);
-
-}
-
-
-
-.timeline-card span{
-
-color:#00ffff;
-
-font-weight:600;
-
-}
-
-
-.timeline-card h3{
-
-margin-top:15px;
-
-font-size:28px;
-
-}
-
-
-
-.timeline-card h4{
-
-color:#9b5cff;
-
-margin:10px 0;
-
-}
-
-
-.timeline-card p,
-.timeline-card li{
-
-color:#aaa;
-
-line-height:1.8;
-
-}
-
-
-.timeline-card ul{
-
-margin-top:15px;
-
-}
-
-
-
-</style>
-
-
-
-
-
-
-<!-- ================= PROJECTS ================= -->
-
-<section id="projects">
-
-
-<h2 class="title">
-Featured Projects
-</h2>
-
-
-
-
-<div class="projects-grid">
-
-
-
-<div class="glass project-card">
-
-
-<h3>
-SALICO Insurance Platform
-</h3>
-
-
-<p>
-
-Enterprise insurance management system
-developed for business operations.
-
-</p>
-
-
-<div class="tags">
-
-<span>.NET 10</span>
-<span>Blazor</span>
-<span>SQL Server</span>
-<span>AWS</span>
-
-</div>
-
-
-<ul>
-
-<li>
-Policy Management
-</li>
-
-<li>
-Underwriting Workflow
-</li>
-
-<li>
-User Permission System
-</li>
-
-<li>
-Reports & Dashboard
-</li>
-
-</ul>
-
-
-</div>
-
-
-
-
-
-<div class="glass project-card">
-
-
-<h3>
-MicroInsurance System
-</h3>
-
-
-<p>
-
-Digital insurance solution designed
-for simplified policy management.
-
-</p>
-
-
-<div class="tags">
-
-<span>ASP.NET Core</span>
-<span>React</span>
-<span>API</span>
-
-</div>
-
-
-<ul>
-
-<li>
-Customer Management
-</li>
-
-<li>
-Premium Processing
-</li>
-
-<li>
-Policy Generation
-</li>
-
-</ul>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="glass project-card">
-
-
-<h3>
-Ticket Management System
-</h3>
-
-
-<p>
-
-Enterprise support system with
-notification and workflow management.
-
-</p>
-
-
-<div class="tags">
-
-<span>Blazor</span>
-<span>SignalR</span>
-<span>JWT</span>
-
-</div>
-
-
-<ul>
-
-<li>
-Real-time Notification
-</li>
-
-<li>
-Role Based Access
-</li>
-
-<li>
-Task Assignment
-</li>
-
-</ul>
-
-
-</div>
-
-
-
-
-
-
-<div class="glass project-card">
-
-
-<h3>
-Inventory Management System
-</h3>
-
-
-<p>
-
-Asset tracking and inventory solution
-for enterprise organizations.
-
-</p>
-
-
-<div class="tags">
-
-<span>.NET</span>
-<span>SQL Server</span>
-<span>EF Core</span>
-
-</div>
-
-
-<ul>
-
-<li>
-Asset Tracking
-</li>
-
-<li>
-Stock Management
-</li>
-
-<li>
-Depreciation Management
-</li>
-
-</ul>
-
-
-</div>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-<style>
-
-
-.projects-grid{
-
-display:grid;
-
-grid-template-columns:repeat(2,1fr);
-
-gap:30px;
-
-}
-
-
-
-.project-card{
-
-transition:.4s;
-
-}
-
-
-.project-card:hover{
-
-transform:
-translateY(-12px);
-
-}
-
-
-
-.project-card h3{
-
-font-size:26px;
-
-margin-bottom:15px;
-
-}
-
-
-.project-card p{
-
-color:#aaa;
-
-line-height:1.7;
-
-}
-
-
-
-.project-card li{
-
-color:#bbb;
-
-margin:8px 0;
-
-}
-
-
-
-.tags{
-
-margin:20px 0;
-
-}
-
-
-.tags span{
-
-display:inline-block;
-
-padding:7px 14px;
-
-border-radius:20px;
-
-background:rgba(155,92,255,.2);
-
-margin:5px;
-
-font-size:13px;
-
-}
-
-
-
-@media(max-width:800px){
-
-.projects-grid{
-
-grid-template-columns:1fr;
-
-}
-
-}
-
-
-
-</style> <!-- ================= CONTACT ================= -->
-
-<section id="contact">
-
-<h2 class="title">
-Contact Me
-</h2>
-
-
-<div class="contact-grid">
-
-
-<div class="glass contact-box">
-
-
-<h3>
-Let's Build Something Great
-</h3>
-
-
-<p>
-
-Have a project idea, collaboration opportunity,
-or want to discuss software development?
-
-Feel free to contact me.
-
-</p>
-
-
-<br>
-
-
-<p>
-<i class="fa-solid fa-location-dot"></i>
-Kathmandu, Nepal
-</p>
-
-
-<p>
-<i class="fa-solid fa-envelope"></i>
-adish.ghimire@gmail.com
-</p>
-
-
-<p>
-<i class="fa-solid fa-briefcase"></i>
-Full-Stack .NET Developer
-</p>
-
-
-</div>
-
-
-
-
-
-<div class="glass">
-
-
-<form action="https://formsubmit.co/YOUR_EMAIL" method="POST">
-
-
-<input 
-type="text"
-name="name"
-placeholder="Your Name"
-required>
-
-
-<input 
-type="email"
-name="email"
-placeholder="Your Email"
-required>
-
-
-<input 
-type="text"
-name="subject"
-placeholder="Subject">
-
-
-<textarea
-name="message"
-rows="5"
-placeholder="Your Message"></textarea>
-
-
-
-<button class="btn magnetic">
-
-Send Message
-
-</button>
-
-
-</form>
-
-
-</div>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-<style>
-
-
-.contact-grid{
-
-display:grid;
-
-grid-template-columns:1fr 1fr;
-
-gap:40px;
-
-}
-
-
-
-.contact-box p{
-
-color:#aaa;
-
-line-height:2;
-
-}
-
-
-
-form input,
-form textarea{
-
-
-width:100%;
-
-padding:15px;
-
-margin-bottom:15px;
-
-background:rgba(255,255,255,.05);
-
-border:1px solid rgba(255,255,255,.1);
-
-border-radius:15px;
-
-color:white;
-
-outline:none;
-
-
-}
-
-
-
-form textarea{
-
-resize:none;
-
-}
-
-
-
-form input:focus,
-form textarea:focus{
-
-border-color:#9b5cff;
-
-}
-
-
-
-@media(max-width:800px){
-
-.contact-grid{
-
-grid-template-columns:1fr;
-
-}
-
-}
-
-
-</style>
-
-
-
-
-
-
-
-<!-- ================= FOOTER ================= -->
-
-<footer>
-
-
-<div class="footer-content">
-
-
-<h2>
-ADISH GHIMIRE
-</h2>
-
-
-<p>
-
-Full-Stack .NET Developer |
-Insurance Domain Specialist
-
-</p>
-
-
-
-<div class="socials">
-
-
-<a href="https://github.com/adish-ghimire">
-<i class="fab fa-github"></i>
-</a>
-
-
-<a href="https://linkedin.com/in/adish-ghimire-a58085187">
-<i class="fab fa-linkedin"></i>
-</a>
-
-
-
-<a href="https://youtube.com/@DotNetPathshala">
-<i class="fab fa-youtube"></i>
-</a>
-
-
-
-<a href="https://facebook.com/adish.ghimire.3">
-<i class="fab fa-facebook"></i>
-</a>
-
-
-</div>
-
-
-<p class="copyright">
-
-© 2026 Adish Ghimire. All Rights Reserved.
-
-</p>
-
-
-</div>
-
-
-</footer>
-
-
-
-
-
-<style>
-
-
-footer{
-
-padding:60px 8%;
-
-border-top:1px solid rgba(255,255,255,.1);
-
-text-align:center;
-
-}
-
-
-
-.footer-content h2{
-
-font-size:35px;
-
-}
-
-
-.footer-content p{
-
-color:#aaa;
-
-margin:15px;
-
-}
-
-
-
-.socials a{
-
-font-size:25px;
-
-margin:10px;
-
-color:white;
-
-transition:.3s;
-
-}
-
-
-
-.socials a:hover{
-
-color:#9b5cff;
-
-}
-
-
-
-</style>
-
-
-
-
-
-
-<!-- ================= SCROLL PROGRESS ================= -->
-
-
-<div class="progress-bar"></div>
-
-
-
-<style>
-
-
-.progress-bar{
-
-position:fixed;
-
-top:0;
-
-left:0;
-
-height:4px;
-
-background:linear-gradient(
-90deg,
-#9b5cff,
-#00ffff
-);
-
-width:0%;
-
-z-index:99999;
-
-}
-
-
-</style>
-
-
-
-
-
-
-<!-- ================= JSON LD ================= -->
-
+<meta property="og:title" content="Adish Ghimire — Full-Stack .NET Developer">
+<meta property="og:description" content="Enterprise insurance systems, Blazor applications and developer education — a working record of Adish Ghimire's practice.">
+<meta property="og:url" content="https://adish-seven.vercel.app/">
+<meta property="og:site_name" content="Adish Ghimire">
+<meta property="og:image" content="https://adish-seven.vercel.app/og-cover.png">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Adish Ghimire — Full-Stack .NET Developer">
+<meta name="twitter:description" content="Enterprise insurance systems, Blazor applications and developer education.">
+<meta name="twitter:image" content="https://adish-seven.vercel.app/og-cover.png">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%232E3192'/%3E%3Ctext x='32' y='41' font-family='Georgia,serif' font-size='26' fill='%23F6F4EF' text-anchor='middle'%3EAG%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
 
 <script type="application/ld+json">
-
 {
-
-"@context":"https://schema.org",
-
-"@type":"Person",
-
-"name":"Adish Ghimire",
-
-"jobTitle":"Full-Stack .NET Developer",
-
-"url":"https://adish-ghimire.github.io",
-
-"sameAs":[
-
-"https://github.com/adish-ghimire",
-
-"https://linkedin.com/in/adish-ghimire-a58085187"
-
-],
-
-"knowsAbout":[
-
-".NET",
-
-"ASP.NET Core",
-
-"Blazor",
-
-"React",
-
-"SQL Server",
-
-"AWS"
-
-]
-
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Adish Ghimire",
+  "jobTitle": "Full-Stack .NET Developer",
+  "url": "https://adish-seven.vercel.app",
+  "email": "mailto:adish.ghimire@gmail.com",
+  "address": { "@type": "PostalAddress", "addressLocality": "Kathmandu", "addressCountry": "NP" },
+  "worksFor": { "@type": "Organization", "name": "Sagarmatha Lumbini Insurance Company" },
+  "sameAs": [
+    "https://github.com/adish-ghimire",
+    "https://linkedin.com/in/adish-ghimire-a58085187",
+    "https://youtube.com/@DotNetPathshala",
+    "https://facebook.com/adish.ghimire.3"
+  ],
+  "knowsAbout": [".NET", "ASP.NET Core", "Blazor", "React", "SQL Server", "AWS", "Insurance Software"]
 }
-
 </script>
 
+<style>
+/* ============================= TOKENS ============================= */
+:root{
+  --serif:'Fraunces',Georgia,serif;
+  --sans:'Inter',system-ui,-apple-system,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
 
+  --radius-s:10px; --radius-m:18px; --radius-l:28px;
+  --ease:cubic-bezier(.16,1,.3,1);
+  --container:1180px;
 
+  /* light (default) */
+  --bg:#F6F4EF;
+  --bg-2:#EFEBE2;
+  --surface:#FFFFFF;
+  --glass:rgba(255,255,255,.55);
+  --glass-border:rgba(20,23,31,.09);
+  --text:#181A22;
+  --text-muted:#5B5F6B;
+  --text-faint:#8A8E99;
+  --line:rgba(20,23,31,.12);
+  --primary:#2E3192;
+  --primary-2:#4B4FD1;
+  --teal:#0B948E;
+  --amber:#B07A24;
+  --aurora-a:rgba(46,49,146,.18);
+  --aurora-b:rgba(11,148,142,.16);
+  --shadow:0 20px 60px -25px rgba(20,23,31,.25);
+  --noise-op:.035;
+}
+[data-theme="dark"]{
+  --bg:#0A0D14;
+  --bg-2:#0F131C;
+  --surface:#131722;
+  --glass:rgba(255,255,255,.055);
+  --glass-border:rgba(255,255,255,.1);
+  --text:#EBEDF4;
+  --text-muted:#9AA0AF;
+  --text-faint:#666C7B;
+  --line:rgba(255,255,255,.1);
+  --primary:#8386FF;
+  --primary-2:#A0A3FF;
+  --teal:#33D6C8;
+  --amber:#E4B564;
+  --aurora-a:rgba(131,134,255,.22);
+  --aurora-b:rgba(51,214,200,.16);
+  --shadow:0 20px 60px -20px rgba(0,0,0,.55);
+  --noise-op:.05;
+}
 
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  *{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important;}
+}
+body{
+  font-family:var(--sans);
+  background:var(--bg);
+  color:var(--text);
+  overflow-x:hidden;
+  transition:background .5s var(--ease),color .5s var(--ease);
+  line-height:1.5;
+}
+img,svg{display:block;max-width:100%;}
+a{color:inherit;}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer;}
+ul{list-style:none;}
+::selection{background:var(--primary);color:#fff;}
 
+:focus-visible{outline:2px solid var(--primary);outline-offset:3px;border-radius:4px;}
 
-<!-- ================= JAVASCRIPT ================= -->
+.skip-link{
+  position:fixed;top:-100px;left:16px;z-index:10000;
+  background:var(--primary);color:#fff;padding:12px 20px;border-radius:8px;
+  font-family:var(--mono);font-size:13px;transition:top .25s var(--ease);
+}
+.skip-link:focus{top:16px;}
 
+/* ============================= TEXTURE / AMBIENCE ============================= */
+.noise{
+  position:fixed;inset:0;z-index:9990;pointer-events:none;
+  opacity:var(--noise-op);mix-blend-mode:overlay;
+}
+.aurora-field{position:fixed;inset:0;z-index:-2;overflow:hidden;pointer-events:none;}
+.aurora{
+  position:absolute;width:56vw;height:56vw;border-radius:50%;
+  filter:blur(120px);will-change:transform;
+}
+.aurora--a{background:var(--aurora-a);top:-18%;left:-10%;}
+.aurora--b{background:var(--aurora-b);bottom:-22%;right:-8%;}
+
+.grid-overlay{
+  position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background-image:
+    linear-gradient(var(--line) 1px,transparent 1px),
+    linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:64px 64px;
+  opacity:.35;
+  mask-image:radial-gradient(ellipse 80% 50% at 50% 0%,#000 40%,transparent 90%);
+}
+
+/* ============================= LOADER ============================= */
+.loader{
+  position:fixed;inset:0;z-index:99999;background:var(--bg);
+  display:flex;align-items:center;justify-content:center;
+  transition:opacity .6s var(--ease),visibility .6s var(--ease);
+}
+.loader.is-hidden{opacity:0;visibility:hidden;}
+.loader-mark{
+  font-family:var(--mono);font-size:13px;letter-spacing:.18em;color:var(--text-muted);
+  display:flex;flex-direction:column;align-items:center;gap:14px;
+}
+.loader-ring{
+  width:34px;height:34px;border-radius:50%;
+  border:2px solid var(--line);border-top-color:var(--primary);
+  animation:spin 1s linear infinite;
+}
+@keyframes spin{to{transform:rotate(360deg);}}
+
+/* ============================= CURSOR ============================= */
+.cursor-dot,.cursor-ring{
+  position:fixed;top:0;left:0;border-radius:50%;pointer-events:none;z-index:99998;
+  transform:translate(-50%,-50%);
+}
+.cursor-dot{width:6px;height:6px;background:var(--primary);}
+.cursor-ring{width:32px;height:32px;border:1px solid var(--primary);opacity:.55;transition:width .25s var(--ease),height .25s var(--ease),opacity .25s var(--ease);}
+.cursor-ring.is-active{width:52px;height:52px;opacity:.9;background:var(--glass);}
+@media (hover:none),(pointer:coarse){
+  .cursor-dot,.cursor-ring{display:none;}
+}
+
+/* ============================= SCROLL PROGRESS ============================= */
+.progress-bar{
+  position:fixed;top:0;left:0;height:3px;width:0%;z-index:9999;
+  background:linear-gradient(90deg,var(--primary),var(--teal));
+  transition:width .1s linear;
+}
+
+/* ============================= NAVBAR ============================= */
+.navbar{
+  position:fixed;top:14px;left:50%;transform:translateX(-50%);
+  width:min(94%,var(--container));z-index:1000;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px 14px 12px 22px;border-radius:100px;
+  background:var(--glass);border:1px solid var(--glass-border);
+  backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4);
+  box-shadow:0 10px 30px -18px rgba(20,23,31,.2);
+  transition:padding .35s var(--ease),background .4s var(--ease),border-color .4s var(--ease);
+}
+.navbar.is-scrolled{padding:8px 10px 8px 20px;box-shadow:var(--shadow);}
+.brand{
+  font-family:var(--serif);font-weight:600;font-size:19px;letter-spacing:.01em;
+  display:flex;align-items:center;gap:10px;
+}
+.brand-mark{
+  width:32px;height:32px;border-radius:50%;
+  background:linear-gradient(135deg,var(--primary),var(--teal));
+  color:#fff;display:flex;align-items:center;justify-content:center;
+  font-family:var(--mono);font-size:12px;font-weight:600;
+}
+.nav-links{display:flex;align-items:center;gap:2px;}
+.nav-links a{
+  padding:9px 16px;border-radius:100px;font-size:14.5px;color:var(--text-muted);
+  transition:color .25s var(--ease),background .25s var(--ease);
+}
+.nav-links a:hover,.nav-links a:focus-visible{color:var(--text);background:var(--line);}
+.nav-actions{display:flex;align-items:center;gap:8px;}
+
+.theme-toggle{
+  width:44px;height:44px;border-radius:50%;
+  border:1px solid var(--glass-border);
+  display:flex;align-items:center;justify-content:center;
+  position:relative;overflow:hidden;
+}
+.theme-toggle svg{width:18px;height:18px;position:absolute;transition:transform .45s var(--ease),opacity .35s var(--ease);}
+.icon-sun{opacity:1;transform:translateY(0) rotate(0);}
+.icon-moon{opacity:0;transform:translateY(10px) rotate(-40deg);}
+[data-theme="dark"] .icon-sun{opacity:0;transform:translateY(-10px) rotate(40deg);}
+[data-theme="dark"] .icon-moon{opacity:1;transform:translateY(0) rotate(0);}
+
+.menu-toggle{
+  display:none;width:44px;height:44px;border-radius:50%;border:1px solid var(--glass-border);
+  align-items:center;justify-content:center;flex-direction:column;gap:4px;
+}
+.menu-toggle span{width:16px;height:2px;background:var(--text);transition:transform .3s var(--ease),opacity .3s var(--ease);}
+.menu-toggle.is-open span:nth-child(1){transform:translateY(6px) rotate(45deg);}
+.menu-toggle.is-open span:nth-child(2){opacity:0;}
+.menu-toggle.is-open span:nth-child(3){transform:translateY(-6px) rotate(-45deg);}
+
+.mobile-menu{
+  position:fixed;inset:0;z-index:998;background:var(--bg);
+  display:flex;flex-direction:column;justify-content:center;gap:6px;padding:0 10%;
+  transform:translateY(-100%);opacity:0;transition:transform .5s var(--ease),opacity .4s var(--ease);
+}
+.mobile-menu.is-open{transform:translateY(0);opacity:1;}
+.mobile-menu a{font-family:var(--serif);font-size:clamp(32px,9vw,52px);padding:10px 0;border-bottom:1px solid var(--line);}
+
+/* ============================= LAYOUT / TYPE ============================= */
+.wrap{max-width:var(--container);margin:0 auto;padding:0 24px;}
+section{padding:120px 0;position:relative;}
+.eyebrow{
+  font-family:var(--mono);font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--primary);display:flex;align-items:center;gap:10px;margin-bottom:18px;
+}
+.eyebrow::before{content:'';width:22px;height:1px;background:var(--primary);}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:600;line-height:1.08;letter-spacing:-.01em;}
+.section-title{font-size:clamp(32px,4.4vw,50px);margin-bottom:52px;max-width:640px;}
+.muted{color:var(--text-muted);}
+
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease),transform .9s var(--ease);}
+.reveal.is-visible{opacity:1;transform:translateY(0);}
+
+.glass{
+  background:var(--glass);border:1px solid var(--glass-border);
+  border-radius:var(--radius-l);backdrop-filter:blur(16px) saturate(1.3);-webkit-backdrop-filter:blur(16px) saturate(1.3);
+  box-shadow:var(--shadow);
+}
+
+.btn{
+  display:inline-flex;align-items:center;gap:10px;padding:15px 28px;border-radius:100px;
+  font-weight:600;font-size:14.5px;transition:transform .35s var(--ease),background .3s,color .3s,border-color .3s;
+}
+.btn-solid{background:var(--text);color:var(--bg);}
+[data-theme="dark"] .btn-solid{background:var(--primary);color:#fff;}
+.btn-solid:hover{transform:translateY(-4px);}
+.btn-outline{border:1px solid var(--line);}
+.btn-outline:hover{border-color:var(--primary);color:var(--primary);transform:translateY(-4px);}
+
+/* ============================= HERO ============================= */
+.hero{min-height:100vh;min-height:100svh;display:flex;align-items:center;padding:150px 0 80px;}
+.hero-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:60px;align-items:center;}
+.hero h1{font-size:clamp(46px,7vw,84px);}
+.hero h1 em{font-style:normal;background:linear-gradient(100deg,var(--primary),var(--teal));-webkit-background-clip:text;background-clip:text;color:transparent;}
+.hero-role{font-family:var(--mono);font-size:15px;color:var(--text-muted);margin-top:18px;letter-spacing:.02em;}
+.hero-desc{max-width:520px;color:var(--text-muted);font-size:18px;margin:26px 0 36px;}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;}
+
+.dossier{
+  padding:26px;font-family:var(--mono);font-size:13px;
+}
+.dossier-row{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px dashed var(--line);}
+.dossier-row:last-child{border-bottom:none;}
+.dossier-row span:first-child{color:var(--text-faint);text-transform:uppercase;letter-spacing:.08em;font-size:11px;}
+.dossier-row span:last-child{text-align:right;color:var(--text);}
+.status-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--teal);margin-right:7px;box-shadow:0 0 0 3px rgba(11,148,142,.18);}
+
+.seal{
+  margin-top:26px;width:112px;height:112px;border-radius:50%;
+  border:1.5px solid var(--primary);position:relative;
+  display:flex;align-items:center;justify-content:center;
+  transform:rotate(-8deg) scale(.85);opacity:0;
+  transition:transform 1s var(--ease) .3s,opacity 1s var(--ease) .3s;
+}
+.seal.is-visible{transform:rotate(-8deg) scale(1);opacity:1;}
+.seal::before{
+  content:'';position:absolute;inset:6px;border-radius:50%;border:1px dashed var(--line);
+}
+.seal-text{
+  font-family:var(--mono);font-size:8.5px;letter-spacing:.14em;text-align:center;color:var(--primary);
+  transform:rotate(8deg);line-height:1.6;
+}
+
+/* ============================= ABOUT ============================= */
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;}
+.about-grid .glass{padding:44px;}
+.about-lede{font-family:var(--serif);font-size:23px;line-height:1.5;margin-bottom:20px;}
+.profile-list{margin-top:6px;}
+.profile-list li{display:flex;justify-content:space-between;padding:13px 0;border-bottom:1px solid var(--line);font-size:14.5px;}
+.profile-list li:last-child{border-bottom:none;}
+.profile-list li span:first-child{color:var(--text-faint);font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.06em;}
+
+/* ============================= SKILLS ============================= */
+.skills-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+.skill-card{padding:30px 26px;transition:transform .4s var(--ease),border-color .4s;}
+.skill-card:hover{transform:translateY(-8px);border-color:var(--primary);}
+.skill-card .eyebrow{margin-bottom:22px;}
+.skill-card h3{font-size:20px;margin-bottom:16px;}
+.skill-row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--line);font-size:13.5px;color:var(--text-muted);}
+.skill-row:last-child{border-bottom:none;}
+.skill-row span:last-child{font-family:var(--mono);font-size:11px;color:var(--text-faint);}
+
+/* ============================= EXPERIENCE ============================= */
+.timeline{max-width:880px;position:relative;padding-left:36px;}
+.timeline::before{content:'';position:absolute;left:5px;top:6px;bottom:6px;width:1px;background:var(--line);}
+.timeline-item{position:relative;padding-bottom:52px;}
+.timeline-item:last-child{padding-bottom:0;}
+.timeline-item::before{
+  content:'';position:absolute;left:-36px;top:6px;width:11px;height:11px;border-radius:50%;
+  background:var(--bg);border:2px solid var(--primary);
+}
+.timeline-date{font-family:var(--mono);font-size:12.5px;color:var(--teal);letter-spacing:.05em;}
+.timeline-item h3{font-size:24px;margin:10px 0 4px;}
+.timeline-item h4{font-family:var(--sans);font-weight:600;font-size:15px;color:var(--primary);margin-bottom:12px;}
+.timeline-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
+.timeline-tags span{
+  font-family:var(--mono);font-size:11.5px;padding:6px 12px;border-radius:100px;
+  border:1px solid var(--line);color:var(--text-muted);
+}
+
+/* ============================= PROJECTS ============================= */
+.projects-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
+.project-card{padding:36px;transition:transform .4s var(--ease);position:relative;overflow:hidden;}
+.project-card:hover{transform:translateY(-10px);}
+.file-no{font-family:var(--mono);font-size:12px;color:var(--text-faint);letter-spacing:.1em;}
+.project-card h3{font-size:25px;margin:14px 0 12px;}
+.project-card p{color:var(--text-muted);margin-bottom:20px;font-size:15px;}
+.tag-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;}
+.tag-row span{font-family:var(--mono);font-size:11.5px;padding:6px 12px;border-radius:100px;background:var(--line);color:var(--text-muted);}
+.project-list li{position:relative;padding-left:18px;color:var(--text-muted);font-size:14px;margin:7px 0;}
+.project-list li::before{content:'—';position:absolute;left:0;color:var(--teal);}
+
+/* ============================= TEACHING ============================= */
+.teach-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:28px;align-items:stretch;}
+.teach-grid .glass{padding:40px;}
+.teach-badge{
+  display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;
+  padding:8px 14px;border-radius:100px;border:1px solid var(--line);color:var(--text-muted);margin-bottom:20px;
+}
+.teach-grid h3{font-size:26px;margin-bottom:14px;}
+
+/* ============================= CONTACT ============================= */
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;}
+.contact-grid .glass{padding:44px;}
+.contact-info li{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line);font-size:15px;}
+.contact-info li:last-child{border-bottom:none;}
+.contact-info svg{width:18px;height:18px;color:var(--primary);flex-shrink:0;margin-top:2px;}
+.field{margin-bottom:26px;}
+.field label{display:block;font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-faint);margin-bottom:10px;}
+.field input,.field textarea{
+  width:100%;background:transparent;border:none;border-bottom:1px solid var(--line);
+  padding:10px 2px;font-family:var(--sans);font-size:16px;color:var(--text);resize:none;
+  transition:border-color .3s;
+}
+.field input:focus,.field textarea:focus{border-color:var(--primary);outline:none;}
+.field input::placeholder,.field textarea::placeholder{color:var(--text-faint);}
+
+/* ============================= FOOTER ============================= */
+footer{border-top:1px solid var(--line);padding:64px 0 40px;}
+.footer-grid{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px;}
+.footer-brand{font-family:var(--serif);font-size:22px;}
+.socials{display:flex;gap:10px;}
+.socials a{
+  width:42px;height:42px;border-radius:50%;border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:center;transition:border-color .3s,transform .3s;
+}
+.socials a:hover{border-color:var(--primary);color:var(--primary);transform:translateY(-4px);}
+.socials svg{width:18px;height:18px;}
+.copyright{font-family:var(--mono);font-size:12px;color:var(--text-faint);margin-top:34px;text-align:center;}
+
+/* ============================= RESPONSIVE ============================= */
+@media(max-width:980px){
+  .hero-grid{grid-template-columns:1fr;}
+  .dossier{order:-1;max-width:360px;}
+  .about-grid,.teach-grid,.contact-grid{grid-template-columns:1fr;}
+  .skills-grid{grid-template-columns:repeat(2,1fr);}
+  .projects-grid{grid-template-columns:1fr;}
+}
+@media(max-width:720px){
+  .nav-links{display:none;}
+  .menu-toggle{display:flex;}
+  section{padding:88px 0;}
+  .skills-grid{grid-template-columns:1fr;}
+  .br-lg{display:none;}
+  .aurora{filter:blur(70px);}
+}
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader-mark">
+    <div class="loader-ring"></div>
+    <span>LOADING RECORD</span>
+  </div>
+</div>
+
+<div class="noise" aria-hidden="true"></div>
+<div class="grid-overlay" aria-hidden="true"></div>
+<div class="aurora-field" aria-hidden="true">
+  <div class="aurora aurora--a" id="auroraA"></div>
+  <div class="aurora aurora--b" id="auroraB"></div>
+</div>
+
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+<div class="progress-bar" id="progressBar"></div>
+
+<header>
+  <nav class="navbar" id="navbar" aria-label="Primary">
+    <a href="#main" class="brand">
+      <span class="brand-mark">AG</span>
+      Adish Ghimire
+    </a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <button class="theme-toggle magnetic" id="themeToggle" aria-label="Switch to dark theme" aria-pressed="false">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>
+      </button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<nav class="mobile-menu" id="mobileMenu" aria-label="Mobile">
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#experience">Experience</a>
+  <a href="#projects">Projects</a>
+  <a href="#teaching">Teaching</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Dossier No. 2026 / Full-Stack Record</p>
+        <h1>Building <em>reliable</em> <span class="br-lg"><br></span>systems for people <span class="br-lg"><br></span>who insure people.</h1>
+        <p class="hero-role">.NET Developer · Insurance Domain Specialist · Educator</p>
+        <p class="hero-desc">I'm Adish Ghimire, a full-stack developer in Kathmandu writing ASP.NET Core, Blazor and SQL Server into policy, underwriting and claims systems — and teaching the next batch of developers how it's done.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-solid magnetic">View Case Files</a>
+          <a href="#contact" class="btn btn-outline magnetic">Get in Touch</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="glass dossier">
+          <div class="dossier-row"><span>Applicant</span><span>Adish Ghimire</span></div>
+          <div class="dossier-row"><span>Role</span><span>Full-Stack .NET Dev</span></div>
+          <div class="dossier-row"><span>Based in</span><span>Kathmandu, NP</span></div>
+          <div class="dossier-row"><span>Focus</span><span>Insurance Systems</span></div>
+          <div class="dossier-row"><span>Status</span><span><i class="status-dot"></i>Open to Work</span></div>
+        </div>
+        <div class="seal" id="seal">
+          <span class="seal-text">VERIFIED<br>SINCE 2023<br>.NET · SQL</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap">
+      <p class="eyebrow">About</p>
+      <h2 class="section-title">A developer who reads the fine print.</h2>
+      <div class="about-grid">
+        <div class="glass reveal">
+          <p class="about-lede">Three-plus years building enterprise software where correctness actually matters — insurance is unforgiving of bugs.</p>
+          <p class="muted">I currently work as a .NET Developer at Sagarmatha Lumbini Insurance Company, developing insurance applications, APIs and business solutions end to end — from database schema to the screens underwriters use every day. Outside of production work, I teach computer science and run DotNet Pathshala, a channel that walks Nepali and English-speaking learners through C# and .NET from first principles.</p>
+        </div>
+        <div class="glass reveal">
+          <h3 style="font-size:19px;margin-bottom:4px;">Profile</h3>
+          <ul class="profile-list">
+            <li><span>Role</span><span>Software Developer</span></li>
+            <li><span>Domain</span><span>Insurance Systems</span></li>
+            <li><span>Teaching</span><span>Computer Science, NEB +2</span></li>
+            <li><span>Creator</span><span>DotNet Pathshala</span></li>
+            <li><span>Study</span><span>MCS Student</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="wrap">
+      <p class="eyebrow">Capabilities</p>
+      <h2 class="section-title">The stack, laid out like a schema.</h2>
+      <div class="skills-grid">
+        <div class="glass skill-card reveal">
+          <p class="eyebrow" style="margin-bottom:18px;">Backend</p>
+          <h3>Server &amp; APIs</h3>
+          <div class="skill-row"><span>C#</span><span>core</span></div>
+          <div class="skill-row"><span>.NET 10</span><span>runtime</span></div>
+          <div class="skill-row"><span>ASP.NET Core</span><span>framework</span></div>
+          <div class="skill-row"><span>Blazor</span><span>UI</span></div>
+          <div class="skill-row"><span>REST API</span><span>interface</span></div>
+          <div class="skill-row"><span>MVC</span><span>pattern</span></div>
+        </div>
+        <div class="glass skill-card reveal">
+          <p class="eyebrow" style="margin-bottom:18px;">Frontend</p>
+          <h3>Interfaces</h3>
+          <div class="skill-row"><span>React.js</span><span>library</span></div>
+          <div class="skill-row"><span>Angular</span><span>framework</span></div>
+          <div class="skill-row"><span>JavaScript</span><span>language</span></div>
+          <div class="skill-row"><span>HTML5 / CSS3</span><span>markup</span></div>
+          <div class="skill-row"><span>Bootstrap</span><span>toolkit</span></div>
+          <div class="skill-row"><span>Tailwind CSS</span><span>toolkit</span></div>
+        </div>
+        <div class="glass skill-card reveal">
+          <p class="eyebrow" style="margin-bottom:18px;">Data</p>
+          <h3>Database &amp; ORM</h3>
+          <div class="skill-row"><span>SQL Server</span><span>rdbms</span></div>
+          <div class="skill-row"><span>EF Core</span><span>orm</span></div>
+          <div class="skill-row"><span>Dapper</span><span>micro-orm</span></div>
+          <div class="skill-row"><span>Schema Design</span><span>practice</span></div>
+          <div class="skill-row"><span>Stored Procs</span><span>practice</span></div>
+          <div class="skill-row"><span>Query Tuning</span><span>practice</span></div>
+        </div>
+        <div class="glass skill-card reveal">
+          <p class="eyebrow" style="margin-bottom:18px;">Cloud</p>
+          <h3>Infra &amp; Tools</h3>
+          <div class="skill-row"><span>AWS Lambda</span><span>compute</span></div>
+          <div class="skill-row"><span>AWS S3</span><span>storage</span></div>
+          <div class="skill-row"><span>AWS SES</span><span>email</span></div>
+          <div class="skill-row"><span>AWS SQS</span><span>queue</span></div>
+          <div class="skill-row"><span>DynamoDB</span><span>nosql</span></div>
+          <div class="skill-row"><span>Git / GitHub</span><span>vcs</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="wrap">
+      <p class="eyebrow">Record</p>
+      <h2 class="section-title">Ledger of experience.</h2>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <span class="timeline-date">2025 — Present</span>
+          <h3>Sagarmatha Lumbini Insurance Company</h3>
+          <h4>.NET Developer</h4>
+          <p class="muted">Building enterprise insurance solutions across the policy lifecycle.</p>
+          <div class="timeline-tags">
+            <span>Insurance Mgmt Systems</span><span>Underwriting Modules</span><span>Policy Processing</span><span>REST APIs</span><span>DB Optimization</span><span>Role &amp; Permission Mgmt</span>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <span class="timeline-date">2023 — 2025</span>
+          <h3>Arhant Solutions</h3>
+          <h4>Full Stack Developer</h4>
+          <p class="muted">Developed insurance-based software solutions for life and micro-insurance products.</p>
+          <div class="timeline-tags">
+            <span>Life Insurance Apps</span><span>MicroInsurance Platform</span><span>Policy Printing</span><span>Premium Schedules</span><span>Enterprise Web Apps</span>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <span class="timeline-date">2026 — Present</span>
+          <h3>Aadhaarshila Academy</h3>
+          <h4>Part-Time Computer Science Teacher</h4>
+          <p class="muted">Teaching the NEB +2 Computer Science curriculum.</p>
+          <div class="timeline-tags">
+            <span>Programming Fundamentals</span><span>Database Concepts</span><span>CS Theory</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="wrap">
+      <p class="eyebrow">Case Files</p>
+      <h2 class="section-title">Selected systems shipped.</h2>
+      <div class="projects-grid">
+        <div class="glass project-card reveal">
+          <span class="file-no">FILE NO. 01</span>
+          <h3>SALICO Insurance Platform</h3>
+          <p>Enterprise insurance management system built for day-to-day business operations.</p>
+          <div class="tag-row"><span>.NET 10</span><span>Blazor</span><span>SQL Server</span><span>AWS</span></div>
+          <ul class="project-list">
+            <li>Policy management</li>
+            <li>Underwriting workflow</li>
+            <li>User permission system</li>
+            <li>Reports &amp; dashboard</li>
+          </ul>
+        </div>
+        <div class="glass project-card reveal">
+          <span class="file-no">FILE NO. 02</span>
+          <h3>MicroInsurance System</h3>
+          <p>Digital insurance solution designed for simplified policy management.</p>
+          <div class="tag-row"><span>ASP.NET Core</span><span>React</span><span>API</span></div>
+          <ul class="project-list">
+            <li>Customer management</li>
+            <li>Premium processing</li>
+            <li>Policy generation</li>
+          </ul>
+        </div>
+        <div class="glass project-card reveal">
+          <span class="file-no">FILE NO. 03</span>
+          <h3>Ticket Management System</h3>
+          <p>Enterprise support system with real-time notification and workflow management.</p>
+          <div class="tag-row"><span>Blazor</span><span>SignalR</span><span>JWT</span></div>
+          <ul class="project-list">
+            <li>Real-time notifications</li>
+            <li>Role based access</li>
+            <li>Task assignment</li>
+          </ul>
+        </div>
+        <div class="glass project-card reveal">
+          <span class="file-no">FILE NO. 04</span>
+          <h3>Inventory Management System</h3>
+          <p>Asset tracking and inventory solution for enterprise organizations.</p>
+          <div class="tag-row"><span>.NET</span><span>SQL Server</span><span>EF Core</span></div>
+          <ul class="project-list">
+            <li>Asset tracking</li>
+            <li>Stock management</li>
+            <li>Depreciation management</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEACHING -->
+  <section id="teaching">
+    <div class="wrap">
+      <p class="eyebrow">Beyond the Code</p>
+      <h2 class="section-title">Teaching what I build.</h2>
+      <div class="teach-grid">
+        <div class="glass reveal">
+          <span class="teach-badge">🎥 DotNet Pathshala</span>
+          <h3>A channel for C# &amp; .NET, taught plainly</h3>
+          <p class="muted">Video lessons in Hindi and English that take beginners from C# fundamentals through the .NET ecosystem — the same explanations I'd want as a first-year developer.</p>
+        </div>
+        <div class="glass reveal">
+          <span class="teach-badge">👨‍🏫 Aadhaarshila Academy</span>
+          <h3>NEB +2 Computer Science</h3>
+          <p class="muted">Part-time classroom teaching covering programming fundamentals, database concepts and computer science theory for +2 students — keeping the fundamentals sharp on both sides of the desk.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap">
+      <p class="eyebrow">Contact</p>
+      <h2 class="section-title">Let's build something great.</h2>
+      <div class="contact-grid">
+        <div class="glass reveal">
+          <p class="muted" style="margin-bottom:10px;">Have a project idea, collaboration opportunity, or want to talk software? Reach out below.</p>
+          <ul class="contact-info">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Kathmandu, Nepal
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+              adish.ghimire@gmail.com
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              Full-Stack .NET Developer
+            </li>
+          </ul>
+        </div>
+        <div class="glass reveal">
+          <form action="https://formsubmit.co/adish.ghimire@gmail.com" method="POST">
+            <div class="field">
+              <label for="name">Your name</label>
+              <input id="name" type="text" name="name" placeholder="Jane Doe" required>
+            </div>
+            <div class="field">
+              <label for="email">Your email</label>
+              <input id="email" type="email" name="email" placeholder="jane@company.com" required>
+            </div>
+            <div class="field">
+              <label for="subject">Subject</label>
+              <input id="subject" type="text" name="subject" placeholder="Project inquiry">
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tell me a bit about what you're building…" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-solid magnetic">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <span class="footer-brand">Adish Ghimire</span>
+      <div class="socials">
+        <a href="https://github.com/adish-ghimire" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.38 7.86 10.9.57.1.78-.25.78-.55v-2.16c-3.2.7-3.87-1.36-3.87-1.36-.53-1.33-1.29-1.68-1.29-1.68-1.05-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.8 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.08.78 2.17v3.22c0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12c0-6.27-5.23-11.5-11.5-11.5z"/></svg>
+        </a>
+        <a href="https://linkedin.com/in/adish-ghimire-a58085187" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.66 4.78 6.1V21h-4v-5.6c0-1.34-.03-3.06-1.86-3.06-1.87 0-2.16 1.46-2.16 2.96V21H9z"/></svg>
+        </a>
+        <a href="https://youtube.com/@DotNetPathshala" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.6-.46-5.3a2.9 2.9 0 0 0-2.05-2.06C18.8 4.2 12 4.2 12 4.2s-6.8 0-8.49.44A2.9 2.9 0 0 0 1.46 6.7C1 8.4 1 12 1 12s0 3.6.46 5.3c.26 1 1.04 1.8 2.05 2.06 1.7.44 8.49.44 8.49.44s6.8 0 8.49-.44a2.9 2.9 0 0 0 2.05-2.06C23 15.6 23 12 23 12zM9.75 15.5v-7l6 3.5-6 3.5z"/></svg>
+        </a>
+        <a href="https://facebook.com/adish.ghimire.3" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14C17.17 2.1 15.9 2 14.6 2 11.9 2 10 3.66 10 6.7v2.8H7v4h3V22h4z"/></svg>
+        </a>
+      </div>
+    </div>
+    <p class="copyright">© 2026 Adish Ghimire. All rights reserved.</p>
+  </div>
+</footer>
 
 <script>
-
-
-// Remove Loader
-
-window.addEventListener(
-"load",
-()=>{
-
-document.querySelector(".loader")
-.style.display="none";
-
-
-});
-
-
-
-
-
-// Scroll Progress
-
-
-window.addEventListener(
-"scroll",
-()=>{
-
-
-let scroll =
-document.documentElement.scrollTop;
-
-
-let height =
-document.documentElement.scrollHeight -
-document.documentElement.clientHeight;
-
-
-let progress =
-(scroll / height) * 100;
-
-
-document.querySelector(".progress-bar")
-.style.width =
-progress+"%";
-
-
-});
-
-
-
-
-
-// Custom Cursor
-
-
-const cursor =
-document.querySelector(".cursor");
-
-
-document.addEventListener(
-"mousemove",
-(e)=>{
-
-
-cursor.style.left =
-e.clientX+"px";
-
-
-cursor.style.top =
-e.clientY+"px";
-
-
-});
-
-
-
-
-
-
-
-// Mouse Parallax Aurora
-
-
-const aurora =
-document.querySelector(".aurora");
-
-
-document.addEventListener(
-"mousemove",
-(e)=>{
-
-
-let x =
-(e.clientX / window.innerWidth)*50;
-
-
-let y =
-(e.clientY / window.innerHeight)*50;
-
-
-aurora.style.transform =
-`translate(${x}px,${y}px)`;
-
-
-});
-
-
-
-
-
-
-// Magnetic Buttons
-
-
-document.querySelectorAll(".magnetic")
-.forEach(btn=>{
-
-
-btn.addEventListener(
-"mousemove",
-(e)=>{
-
-
-let rect =
-btn.getBoundingClientRect();
-
-
-let x =
-e.clientX - rect.left -
-rect.width/2;
-
-
-let y =
-e.clientY - rect.top -
-rect.height/2;
-
-
-
-btn.style.transform =
-`translate(${x*.15}px,${y*.15}px)`;
-
-
-
-});
-
-
-
-btn.addEventListener(
-"mouseleave",
-()=>{
-
-btn.style.transform="translate(0,0)";
-
-});
-
-
-});
-
-
-
-
-
-
-// Reveal animation
-
-
-const observer =
-new IntersectionObserver(
-entries=>{
-
-
-entries.forEach(
-entry=>{
-
-
-if(entry.isIntersecting){
-
-entry.target.style.opacity=1;
-
-entry.target.style.transform="translateY(0)";
-
-}
-
-
-});
-
-
-});
-
-
-
-document.querySelectorAll(".glass")
-.forEach(
-el=>{
-
-
-el.style.opacity=0;
-
-el.style.transform=
-"translateY(40px)";
-
-el.style.transition=
-"1s";
-
-
-observer.observe(el);
-
-
-});
-
-
-
+(function(){
+  "use strict";
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var isTouch = window.matchMedia('(hover: none), (pointer: coarse)').matches;
+
+  /* ---- Theme ---- */
+  var root = document.documentElement;
+  var themeToggle = document.getElementById('themeToggle');
+  var stored = null;
+  try { stored = localStorage.getItem('ag-theme'); } catch(e){}
+  if (stored === 'dark') {
+    root.setAttribute('data-theme','dark');
+    themeToggle.setAttribute('aria-pressed','true');
+    themeToggle.setAttribute('aria-label','Switch to light theme');
+  }
+  themeToggle.addEventListener('click', function(){
+    var isDark = root.getAttribute('data-theme') === 'dark';
+    root.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    themeToggle.setAttribute('aria-pressed', String(!isDark));
+    themeToggle.setAttribute('aria-label', isDark ? 'Switch to dark theme' : 'Switch to light theme');
+    try { localStorage.setItem('ag-theme', isDark ? 'light' : 'dark'); } catch(e){}
+  });
+
+  /* ---- Loader ---- */
+  window.addEventListener('load', function(){
+    var loader = document.getElementById('loader');
+    setTimeout(function(){
+      loader.classList.add('is-hidden');
+      var seal = document.getElementById('seal');
+      if (seal) setTimeout(function(){ seal.classList.add('is-visible'); }, 200);
+    }, 400);
+  });
+
+  /* ---- Scroll progress + sticky navbar ---- */
+  var progressBar = document.getElementById('progressBar');
+  var navbar = document.getElementById('navbar');
+  function onScroll(){
+    var h = document.documentElement;
+    var scrolled = h.scrollTop;
+    var height = h.scrollHeight - h.clientHeight;
+    progressBar.style.width = (height > 0 ? (scrolled/height)*100 : 0) + '%';
+    navbar.classList.toggle('is-scrolled', scrolled > 24);
+  }
+  document.addEventListener('scroll', onScroll, { passive:true });
+  onScroll();
+
+  /* ---- Mobile menu ---- */
+  var menuToggle = document.getElementById('menuToggle');
+  var mobileMenu = document.getElementById('mobileMenu');
+  function closeMenu(){
+    menuToggle.classList.remove('is-open');
+    mobileMenu.classList.remove('is-open');
+    menuToggle.setAttribute('aria-expanded','false');
+    menuToggle.setAttribute('aria-label','Open menu');
+  }
+  menuToggle.addEventListener('click', function(){
+    var open = !mobileMenu.classList.contains('is-open');
+    menuToggle.classList.toggle('is-open', open);
+    mobileMenu.classList.toggle('is-open', open);
+    menuToggle.setAttribute('aria-expanded', String(open));
+    menuToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  });
+  mobileMenu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeMenu); });
+
+  /* ---- Reveal on scroll ---- */
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+
+  /* ---- Cursor + aurora parallax + magnetic buttons (skip on touch/reduced motion) ---- */
+  if (!isTouch && !reduceMotion) {
+    var dot = document.getElementById('cursorDot');
+    var ring = document.getElementById('cursorRing');
+    var auroraA = document.getElementById('auroraA');
+    var auroraB = document.getElementById('auroraB');
+    var ringX = 0, ringY = 0, mouseX = 0, mouseY = 0;
+
+    document.addEventListener('mousemove', function(e){
+      mouseX = e.clientX; mouseY = e.clientY;
+      dot.style.left = mouseX + 'px';
+      dot.style.top = mouseY + 'px';
+
+      var xPct = (e.clientX / window.innerWidth - 0.5);
+      var yPct = (e.clientY / window.innerHeight - 0.5);
+      auroraA.style.transform = 'translate(' + (xPct*40) + 'px,' + (yPct*40) + 'px)';
+      auroraB.style.transform = 'translate(' + (xPct*-50) + 'px,' + (yPct*-50) + 'px)';
+    });
+
+    function animateRing(){
+      ringX += (mouseX - ringX) * 0.18;
+      ringY += (mouseY - ringY) * 0.18;
+      ring.style.left = ringX + 'px';
+      ring.style.top = ringY + 'px';
+      requestAnimationFrame(animateRing);
+    }
+    animateRing();
+
+    document.querySelectorAll('a, button').forEach(function(el){
+      el.addEventListener('mouseenter', function(){ ring.classList.add('is-active'); });
+      el.addEventListener('mouseleave', function(){ ring.classList.remove('is-active'); });
+    });
+
+    document.querySelectorAll('.magnetic').forEach(function(btn){
+      btn.addEventListener('mousemove', function(e){
+        var rect = btn.getBoundingClientRect();
+        var x = e.clientX - rect.left - rect.width/2;
+        var y = e.clientY - rect.top - rect.height/2;
+        btn.style.transform = 'translate(' + (x*0.18) + 'px,' + (y*0.18) + 'px)';
+      });
+      btn.addEventListener('mouseleave', function(){ btn.style.transform = 'translate(0,0)'; });
+    });
+  }
+
+  /* ---- Active nav link on scroll ---- */
+  var sections = document.querySelectorAll('main section[id]');
+  var navAnchors = document.querySelectorAll('.nav-links a');
+  if ('IntersectionObserver' in window && sections.length) {
+    var navIo = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        var id = entry.target.getAttribute('id');
+        var link = document.querySelector('.nav-links a[href="#' + id + '"]');
+        if (!link) return;
+        if (entry.isIntersecting) {
+          navAnchors.forEach(function(a){ a.removeAttribute('aria-current'); });
+          link.setAttribute('aria-current','page');
+        }
+      });
+    }, { rootMargin: '-45% 0px -45% 0px' });
+    sections.forEach(function(s){ navIo.observe(s); });
+  }
+})();
 </script>
-
-
-
 </body>
-
 </html>
